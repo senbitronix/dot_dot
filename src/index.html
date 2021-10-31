@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <link rel="stylesheet" href="css/style.min.css">
+  <script defer src="js/script.js"></script>
+  <title>FTL: Прямая машина</title>
+</head>
+<body>
+  <section class="FTL">
+    <div class="FTL__container container">
+      <form action="https://echo.htmlacademy.ru/courses" class="FTL__wrapper">
+        <h1 class="FTL__title">FTL: Прямая машина</h1>
+        <!-- content starts ------------------------------------>
+        <section class="route subsection">      
+          <h2 class="route__subtitle subtitle">Маршрут</h2>
+          <div class="field">        
+            <label for="from" class="field__label">Откуда</label>
+            <input id="from" name="route-from" type="text" class="field__input">
+          </div>
+          <div class="field">
+            <label for="where" class="field__label">Куда</label>
+            <input id="where" name="route-where" type="text" class="field__input">
+          </div>          
+        </section>
+        <section class="transport subsection">
+          <h2 class="transport__subtitle subtitle">Транспорт</h2>
+          <div class="wrapper half-grid">
+            <div class="transport__field field">
+              <label for="" class="field__label">Грузоподъемность</label>
+              <div class="select">
+                <div class="select__wrapper"><input name="transport-carrying" class="field__input select__final" type="text" value="Не выбрана" data-readonly="true" readonly></div>
+                <ul class="select__box">
+                  <li tabindex="0" class="select__option">Вариант 1</li>
+                  <li tabindex="0" class="select__option">Вариант 2</li>
+                  <li tabindex="0" class="select__option">Вариант 3</li>
+                  <li tabindex="0" class="select__option">Вариант 4</li>
+                  <li tabindex="0" class="select__option">Вариант 5</li>
+                </ul>
+              </div>
+            </div>
+            <div class="transport__field field">
+              <label for="" class="field__label">Способ погрузки</label>
+              <div class="select">
+                <div class="select__wrapper"><input name="transport-shipping-method" class="field__input select__final" type="text" value="Задняя"
+                    data-readonly="false" readonly></div>
+                <ul class="select__box">
+                  <li tabindex="0" class="select__option">Задняя</li>
+                  <li tabindex="0" class="select__option">Боковая</li>
+                  <li tabindex="0" class="select__option">Передняя</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <section class="cargo subsection">
+          <h2 class="cargo__subtitle subtitle">Груз</h2>
+          <div class="mobile-grid">
+            <div class="wrapper">
+              <div class="cargo__field field">
+                <label for="" class="field__label">Тип груза</label>
+                <div class="select">
+                  <div class="select__wrapper"><input name="cargo-type" class="field__input select__final" type="text"
+                      value="Не выбрана" data-readonly="true" readonly></div>
+                  <ul class="select__box">
+                    <li tabindex="0" class="select__option">Вариант 1</li>
+                    <li tabindex="0" class="select__option">Вариант 2</li>
+                    <li tabindex="0" class="select__option">Вариант 3</li>
+                    <li tabindex="0" class="select__option">Вариант 4</li>
+                    <li tabindex="0" class="select__option">Вариант 5</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+  
+            <div class="field wrapper half-grid cargo__half-grid">
+              <div class="mobile-hide">
+                <label for="" class="field__label">Класс опасности</label>
+                <div class="select">
+                  <div class="select__wrapper"><input name="cargo-carrying" class="field__input select__final" type="text"
+                      value="Класс 5 — Окисляющие вещества и органические перекиси" data-readonly="false" readonly></div>
+                  <ul class="select__box">
+                    <li tabindex="0" class="select__option">Класс 1 — Окисляющие вещества и органические перекиси</li>
+                    <li tabindex="0" class="select__option">Класс 2 — Окисляющие вещества и органические перекиси</li>
+                    <li tabindex="0" class="select__option">Класс 3 — Окисляющие вещества и органические перекиси</li>
+                    <li tabindex="0" class="select__option">Класс 4 — Окисляющие вещества и органические перекиси</li>
+                    <li tabindex="0" class="select__option">Класс 5 — Окисляющие вещества и органические перекисио</li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <label for="" class="field__label">Объявленная ценность</label>
+                <input name="cargo-declared-value" type="text" class="field__input" placeholder="≥ 1">
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div class="checkbox wrapper">            
+            <input class="checkbox__input" id="cargo-checkbox-id" name="cargo-checkbox" type="checkbox">
+            
+            <label class="checkbox__label fl" for="cargo-checkbox-id">
+              <div class="checkbox__pseudo-input"></div><span>Требуется температурный режим</span></label>
+
+            <div class="temp half-grid wrapper">
+              <div class="field margin_plus">
+                <label for="" class="field__label">От, °C</label>
+                <input name="temp-from" type="text" class="field__input" value="-20">
+              </div>
+              <div class="field margin_plus">
+                <label for="" class="field__label">До, °C</label>
+                <input name="temp-to" type="text" class="field__input" value="+23">
+              </div>
+            </div>
+            
+          </div>  
+
+        </section>
+        <section class="time subsection">
+          <h2 class="time__subtitle subtitle">Время</h2>
+          <div class="field">
+            <label for="" class="field__label fl_sb"><span>Когда прибыть на точку</span><span>700 км в день</span></label>
+            <div class="time__input time__input_active">
+              <input name="time-when-to-arrive" type="text" class="field__input field__input_dark" readonly>
+              <span class="time__span_left">Адрес не указан</span>
+              <div class="time__span_shadow"><span class="time__span_right">НЕ ВЫБРАНО</span></div>
+            </div>
+            <div class="time__input">
+              <input name="time-when-to-arrive" type="text" class="field__input field__input_dark" readonly>
+              <span class="time__span_left">Адрес не указан</span>
+              <div class="time__span_shadow"><span class="time__span_right">НЕ ВЫБРАНО</span></div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="from" class="field__label">Комментарий к заказу</label>
+            <textarea placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу" name="time-comment" class="time__comment field__input"></textarea>
+          </div>
+        </section>
+
+        <!-- content ends ----------------------------------------->
+      </form>
+      <div class="FTL__instruction">Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.</div>
+      
+    </div>
+  </section>
+
+    
+
+
+  
+  
+</body>
+</html>
