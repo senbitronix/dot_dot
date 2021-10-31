@@ -1,1 +1,1 @@
-https://senbitronix.github.io/dot_dot/src/
+Посмотреть на github.io - https://senbitronix.github.io/dot_dot/src/
